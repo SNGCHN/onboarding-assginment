@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import * as Sentry from "@sentry/vite-plugin";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    Sentry.sentryVitePlugin({
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      org: "your-org-name",
+      project: "your-project-name",
+    }),
+  ],
+});
