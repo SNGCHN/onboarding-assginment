@@ -1,13 +1,14 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/Router";
-import QueryProvider from "./provider/QueryProvder";
+import QueryProvider from "./provider/QueryProvider";
+import AuthInitializer from "./components/auth/AuthInitializer";
 
-function App() {
+export default function App() {
   return (
     <QueryProvider>
-      <RouterProvider router={router} />
+      <AuthInitializer>
+        <RouterProvider router={router} />
+      </AuthInitializer>
     </QueryProvider>
   );
 }
-
-export default App;
