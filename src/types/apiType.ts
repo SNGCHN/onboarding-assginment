@@ -1,3 +1,9 @@
+export interface User {
+  id: string;
+  nickname: string;
+  avatar: string | null;
+}
+
 export interface RegisterRequest {
   id: string;
   password: string;
@@ -39,11 +45,4 @@ export interface ProfileUpdateResponse {
   nickname: string;
   message: string;
   success: boolean;
-}
-
-export interface TodoItem {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
 }
