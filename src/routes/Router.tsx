@@ -3,7 +3,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import MyPage from "../pages/MyPage/MyPage";
-import ProtectedRoute from "../components/common/ProtectedRoute";
+import ProtectedRoute from "../components/auth/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
