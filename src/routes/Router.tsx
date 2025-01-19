@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import MyPage from "../pages/MyPage/MyPage";
+import ProtectedRoute from "../components/common/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -11,14 +12,26 @@ export const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <ProtectedRoute requireAuth={false}>
+        <Login />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/register",
-    element: <Register />,
+    element: (
+      <ProtectedRoute requireAuth={false}>
+        <Register />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/mypage",
-    element: <MyPage />,
+    element: (
+      <ProtectedRoute requireAuth={true}>
+        <MyPage />
+      </ProtectedRoute>
+    ),
   },
 ]);
