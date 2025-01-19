@@ -1,5 +1,6 @@
 import useTodoList from "../../hooks/todo/useTodoList";
 import TodoItem from "./TodoItem";
+import LoadingSpinner from "../common/LoadingSpinner";
 
 export default function TodoList() {
   const { data: todos, isPending, error } = useTodoList();
@@ -7,7 +8,7 @@ export default function TodoList() {
   if (isPending) {
     return (
       <div className="flex justify-center items-center p-8">
-        <p className="text-gray-500">Loading todos...</p>
+        <LoadingSpinner />
       </div>
     );
   }
