@@ -7,7 +7,7 @@ function Header() {
       <div className="max-w-[1440px] mx-auto px-8 py-4">
         <div className="flex justify-between items-center">
           <h1 className="font-bold text-[18px] hover:text-indigo-600">
-            <Link to="/">OnBoarding</Link>
+            <Link to="/">온보딩 과제</Link>
           </h1>
           <Navigation />
         </div>
