@@ -1,8 +1,13 @@
-// src/App.tsx
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/Router";
 import QueryProvider from "./provider/QueryProvder";
 
 function App() {
-  return <QueryProvider></QueryProvider>;
+  return (
+    <QueryProvider>
+      <RouterProvider router={router} />
+    </QueryProvider>
+  );
 }
 
 export default App;
