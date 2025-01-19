@@ -1,7 +1,13 @@
-import React from "react";
+import Page from "../../components/layout/Page";
+import TodoList from "../../components/todo/TodoList";
 
-const Home = () => {
-  return <div></div>;
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <Page>
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-2xl font-bold mb-6">Todo List</h1>
+        <TodoList />
+      </div>
+    </Page>
+  );
+}
